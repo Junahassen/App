@@ -19,19 +19,20 @@ jobs:
 
       - name: Build Android APK
         uses: game-ci/unity-builder@v3
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
         with:
           unityVersion: 2023.3.20f1
           projectPath: .
           targetPlatform: Android
-          androidBuildSubtarget: GoogleAndroid
           buildName: App.apk
-          buildPath: build/android
+          buildsPath: build/android
           customParameters: -quit -batchmode -nographics -silent-crashes
-          githubToken: ${{ secrets.GITHUB_TOKEN }}
-          unityLicense: ${{ secrets.UNITY_LICENSE }}
+          versioning: Semantic
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
-          name: App.apk
-          path: build/android/App.apk
+          name: App-apks
+          path: build/android/**/*.apk
