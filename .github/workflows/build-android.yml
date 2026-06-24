@@ -1,0 +1,37 @@
+name: Build Android APK
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+concurrency:
+  group: build-android-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-android:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Build Android APK
+        uses: game-ci/unity-builder@v3
+        with:
+          unityVersion: 2023.3.20f1
+          projectPath: .
+          targetPlatform: Android
+          androidBuildSubtarget: GoogleAndroid
+          buildName: App.apk
+          buildPath: build/android
+          customParameters: -quit -batchmode -nographics -silent-crashes
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          unityLicense: ${{ secrets.UNITY_LICENSE }}
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: App.apk
+          path: build/android/App.apk
