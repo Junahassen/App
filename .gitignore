@@ -1,0 +1,42 @@
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+UserSettings/
+.vscode/
+.DS_Store
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.cache
+*/.vs/
+
+# Unity generated files
+Assets/AssetStoreTools*
+Assets/Plugins/Editor/JetBrains*
+Assets/Plugins/Editor/VisualStudio*
+
+# Crash dumps
+sysinfo.txt
+crash_log.txt
+
+# Package manager
+Packages/packages-lock.json
+
+# Build output
+*.apk
+*.unitypackage

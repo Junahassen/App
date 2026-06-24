@@ -1,0 +1,13 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!13 &1
+PlayerSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 34
+  m_CompanyName: DefaultCompany
+  m_ProductName: UnitySampleGame
+  m_DefaultScreenWidth: 800
+  m_DefaultScreenHeight: 600
+  m_RunInBackground: 0
+  m_UsePlayerLog: 1
+  m_BuildSubtarget: 0

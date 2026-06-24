@@ -1,0 +1,288 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4}
+  - component: {fileID: 400000}
+  - component: {fileID: 400001}
+  - component: {fileID: 400002}
+  - component: {fileID: 400003}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_IsActive: 1
+--- !u!4 &4
+Transform:
+  m_ObjectHideFlags: 0
+  m_Component: {fileID: 1}
+  m_GameObject: {fileID: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &400000
+Camera:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1}
+  m_Enabled: 1
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.192156866, g: 0.3019608, b: 0.474509806, a: 0}
+  m_NormalizedViewPortRect: {x: 0, y: 0, width: 1, height: 1}
+  m_NearClipPlane: 0.3
+  m_FarClipPlane: 1000
+  m_FieldOfView: 60
+  m_Orthographic: 0
+  m_OrthographicSize: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Mask: -1
+  m_TargetTexture: {fileID: 0}
+  m_HDR: 1
+  m_RenderingPath: -1
+  m_TargetDisplay: 0
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 1
+  m_UsePhysicalProperties: 0
+--- !u!113 &400001
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1}
+  m_Enabled: 1
+--- !u!1 &2
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5}
+  - component: {fileID: 400010}
+  m_Layer: 0
+  m_Name: Directional Light
+  m_TagString: Untagged
+  m_IsActive: 1
+--- !u!4 &5
+Transform:
+  m_ObjectHideFlags: 0
+  m_Component: {fileID: 2}
+  m_GameObject: {fileID: 2}
+  m_LocalPosition: {x: 0, y: 3, z: -3}
+  m_LocalRotation: {x: 0.3826835, y: 0.9238795, z: 0, w: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
+--- !u!108 &400010
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2}
+  m_Enabled: 1
+  m_Type: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Strength: 1
+    m_Resolution: 2
+  m_DrawHalo: 0
+--- !u!1 &3
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6}
+  - component: {fileID: 400020}
+  - component: {fileID: 400021}
+  - component: {fileID: 400022}
+  m_Layer: 0
+  m_Name: Player
+  m_TagString: Untagged
+  m_IsActive: 1
+--- !u!4 &6
+Transform:
+  m_ObjectHideFlags: 0
+  m_Component: {fileID: 3}
+  m_GameObject: {fileID: 3}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!106 &400020
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_GameObject: {fileID: 3}
+  m_IsTrigger: 0
+  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+--- !u!101 &400021
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_GameObject: {fileID: 3}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints:
+    serializedVersion: 2
+    m_ConstraintCount: 0
+    m_Constraints: []
+--- !u!114 &400022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 3}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f6c53c9b6924e3e966fe0b05bc34a8d, type: 3}
+  m_Name: 
+  moveSpeed: 5
+  jumpForce: 5
+--- !u!1 &4
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8}
+  - component: {fileID: 400030}
+  - component: {fileID: 400031}
+  m_Layer: 0
+  m_Name: Ground
+  m_TagString: Untagged
+  m_IsActive: 1
+--- !u!4 &8
+Transform:
+  m_ObjectHideFlags: 0
+  m_Component: {fileID: 7}
+  m_GameObject: {fileID: 4}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalScale: {x: 10, y: 1, z: 10}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!106 &400030
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_GameObject: {fileID: 4}
+  m_IsTrigger: 0
+  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 10, y: 1, z: 10}
+--- !u!1 &5
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_IsActive: 1
+--- !u!4 &9
+Transform:
+  m_ObjectHideFlags: 0
+  m_Component: {fileID: 5}
+  m_GameObject: {fileID: 5}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &400031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 5}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82a4f5b9f3194c839ce1a5d2e1e9a4fa, type: 3}
+  m_Name: 
+  score: 0
+  targetScore: 3
+  fallThreshold: -5
+  message: Collect coins and stay on the platform.
+--- !u!1 &6
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 10}
+  - component: {fileID: 400040}
+  - component: {fileID: 400041}
+  m_Layer: 0
+  m_Name: Collectible
+  m_TagString: Untagged
+  m_IsActive: 1
+--- !u!4 &10
+Transform:
+  m_ObjectHideFlags: 0
+  m_Component: {fileID: 6}
+  m_GameObject: {fileID: 6}
+  m_LocalPosition: {x: 2, y: 0.5, z: 2}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!106 &400040
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_GameObject: {fileID: 6}
+  m_IsTrigger: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.5, y: 0.5, z: 0.5}
+--- !u!114 &400041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 6}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cab4d2f06e9f4d3d8e5c0d7a3b6c9f2e, type: 3}
+  m_Name: 
+  value: 1
+  rotationSpeed: 90
